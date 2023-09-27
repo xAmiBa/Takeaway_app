@@ -15,8 +15,6 @@ Takeaway App provides a menu with various categories of dishes and allows users 
 
 ## Features
 
-![alt text](Takeaway_app/Screenshot%202023-09-27%20at%2021.18.07.png)
-
 
 - Display the menu with items categorized as mains, sides, desserts, and drinks.
 - View the basket, including the quantity and total cost of each item.
@@ -26,17 +24,18 @@ Takeaway App provides a menu with various categories of dishes and allows users 
 - Send an order confirmation via text message using the Twilio API.
 
 ## Usage
-
+![alt text]()
 To use the program, run the provided Python script. The program will prompt the user to perform various actions, such as viewing the menu, managing their basket, and placing an order.
 
 ### Menu Options
+
+![alt text](https://github.com/xAmiBa/Takeaway_app/blob/0815772c76f421321d834c1f48b77d64bd4ee4c2/Screenshot%202023-09-27%20at%2021.18.07.png)
 
 1. **Show Menu**: Display the restaurant menu.
 2. **Show My Basket**: Display the current items in the basket and the total cost.
 3. **Order**: Add an item from the menu to the basket.
 4. **Delete From Basket**: Remove an item from the basket.
 5. **Checkout**: Confirm the order, generate a receipt, and send an order confirmation via text message using the Twilio API.
-
 ## What I Learned
 
 In the development of this program, I have demonstrated the following concepts:
