@@ -15,6 +15,9 @@ Takeaway App provides a menu with various categories of dishes and allows users 
 
 ## Features
 
+![alt text](Takeaway_app/Screenshot%202023-09-27%20at%2021.18.07.png)
+
+
 - Display the menu with items categorized as mains, sides, desserts, and drinks.
 - View the basket, including the quantity and total cost of each item.
 - Add items to the basket.
