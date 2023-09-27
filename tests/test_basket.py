@@ -70,7 +70,7 @@ def test_remove_1item_unit():
     test_basket.remove_basket("New Margarita")
     assert test_basket.view_basket() == "YOUR BASKET:\nChocolate cake | x 1 | 3.99\n\n\nTOTAL: 3.99"
 
-#BUG
+#BUG 
 # def test_view_receipt_unit():
 #     fake_time_now = Mock()
 #     fake_time_now.time_now.return_value = "27 September"

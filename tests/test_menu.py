@@ -11,7 +11,3 @@ import json
 def test_add_position_menu_viev():
     test_menu = Menu()
     assert test_menu.menu_view()[:37] == "*** MENU ***\nMAINS:\nMargarita | 14.99"
-
-# ERRORS
-
-#DONE

@@ -14,7 +14,7 @@ import pytest
 # Available modules:
 		# menu_view():
 		# add_position):
-
+ 
 # def test_add_view_basket_item_added_integration():
 #     test_menu = Menu()
 #     test_basket = Basket()

@@ -2,7 +2,7 @@ from basket import *
 from menu import *
 from confirmation import *
 
-print("------- WELCOME TO AMINA'S RESTAURANT -------\n")
+print("------- WELCOME TO AMINA'S RESTAURANT -------\n ")
 menu = Menu()
 basket = Basket()
 

@@ -22,7 +22,7 @@ class Menu():
     {"dish": "Orange juice", "price": 19.99, "category": "drink", "quantity": 0}
 ]
 
-    # formatted view of Menu
+    # formatted view of Menu 
     def menu_view(self):
         mains = [f"{dish['dish']} | {dish['price']}\n" for dish in self.menu if dish["category"] == "main"]
         sides = [f"{dish['dish']} | {dish['price']}\n" for dish in self.menu if dish["category"] == "side"]

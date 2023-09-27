@@ -19,7 +19,7 @@ class Basket():
             if item["dish"] == add_dish_name:
                 item["quantity"] = item["quantity"] + 1
                 break
-        # catch error when no such dish in the menu
+        # catch error when no such dish in the menu 
         else:
             raise Exception("No such dish in the menu!")
         self.update_basket()
