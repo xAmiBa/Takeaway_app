@@ -2,6 +2,7 @@ from lib.basket import Basket
 import pytest
 from unittest.mock import Mock
 from lib.menu import Menu
+from datetime import datetime
 
 # TESTING CLASS: Basket()
 # Available modules:
@@ -40,6 +41,12 @@ def test_view_total():
     test_basket.add_basket("Margarita")
     assert test_basket.view_total() == 14.99
 
+def test_view_receipt_error():
+    test_basket = Basket()
+    with pytest.raises(Exception) as err:
+        test_basket.view_receipt()
+    assert str(err.value) == "Basket is empty! There is no receipt."
+
 # UNIT TESTS
 def test_add_basket_2items_added_unit():
     fake_menu = Mock()
@@ -63,3 +70,11 @@ def test_remove_1item_unit():
     test_basket.add_basket("Chocolate cake")
     test_basket.remove_basket("New Margarita")
     assert test_basket.view_basket() == "YOUR BASKET:\nChocolate cake | x 1 | 3.99\n\n\nTOTAL: 3.99"
+
+# def test_view_receipt_unit():
+#     fake_time_now = Mock()
+#     fake_time_now.time_now.return_value = "27 September"
+#     test_basket = Basket(Menu(), fake_time_now.time_now)
+#     test_basket.add_basket("Margarita")
+#     test_basket.add_basket("Chocolate cake")
+#     assert test_basket.view_receipt() == f"YOUR RECEIPT:\nMargarita | x 1 | 14.99\nChocolate cake | x 1 | 3.99\n\n\nTOTAL: 18.98\n-----------\n27 September"

@@ -1,15 +1,14 @@
 from menu import Menu
+from datetime import datetime
 
 class Basket():
-    def __init__(self, menu_import = False):
-        # self basket will always extract objects
-        # from Menu.menu with higher quantity than 1
+    def __init__(self, menu_import = False, time = datetime):
         if menu_import == False:
             self.menu_data = Menu()
         else:
             self.menu_data = menu_import
-
-        self.basket = []    # contains MenuItem objects
+        self.basket = []
+        self.time = time
 
     def update_basket(self):
         self.basket = [item for item in self.menu_data.menu if item["quantity"] > 0]
@@ -48,9 +47,22 @@ class Basket():
     def view_total(self):
         total_sum = [(dish['quantity'] * dish['price']) for dish in self.basket]
         return sum(total_sum)
+    
+    # view the receipt
+    def view_receipt(self):
+        if self.basket == []:
+            raise Exception ("Basket is empty! There is no receipt.")
+        self.update_basket()
+        in_receipt = [f"{dish['dish']} | x {dish['quantity']} | {(dish['quantity'])*(dish['price'])}\n" for dish in self.basket]
+        return "YOUR RECEIPT:\n" + "".join(in_receipt) + f"\n\nTOTAL: {self.view_total()}\n-----------\n{self.time_now().today()}"
 
-# test_menu = Menu()
-# test_basket = Basket()
-# test_basket.add_basket("Margarita")
+    def time_now(self):
+        return self.time
 
-# print(test_basket.view_basket())
+test = Basket()
+test.add_basket("Chocolate cake")
+test.add_basket("Margarita")
+test.add_basket("Water")
+# print(test.view_basket())
+# print(test.view_total())
+print(test.view_receipt())

@@ -2,13 +2,9 @@
 > As a customer  
 > So that I can check if I want to order something  
 > I would like to see a list of dishes with prices.
-### class MenuItem()
-- creates MenuItem object
-- self.item_name
-- self.price
-- self.quantity
-- self.category -> sides, mains, desserts, drinks
+
 ### class Menu()
+-  creates menu list of dictionaries
 -  menu_view() -> list of dishes and prices in categories
 ---
 > As a customer  
