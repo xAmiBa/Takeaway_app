@@ -58,11 +58,3 @@ class Basket():
 
     def time_now(self):
         return self.time
-
-test = Basket()
-test.add_basket("Chocolate cake")
-test.add_basket("Margarita")
-test.add_basket("Water")
-# print(test.view_basket())
-# print(test.view_total())
-print(test.view_receipt())
