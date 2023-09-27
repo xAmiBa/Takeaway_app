@@ -8,7 +8,7 @@ basket = Basket()
 
 menu_print = "[1] SHOW MENU \n[2] SHOW MY BASKET\n[3] ORDER\n[4] DELETE FROM BASKET\n[5] CHECKOUT"
 while True:
-    print(menu)
+    print(menu_print)
     user_choice = input("What would you like to do: ")
     
     match user_choice:
@@ -61,6 +61,6 @@ while True:
                     pass
             except Exception as error:
                 print("Ups!", error)
-                
+
 print("Thank you for ordering with Amina's restaurant!\nYour order will be with you shortly!")
     
