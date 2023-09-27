@@ -15,7 +15,7 @@ Takeaway App provides a menu with various categories of dishes and allows users 
 
 ## Features
 
-![alt text](https://github.com/xAmiBa/Takeaway_app/blob/b21b531d3ca9bb7dbfe5eeef91fa1de4850a9e8e/IMG_DF5F15374A02-1.jpeg)
+<img src="https://github.com/xAmiBa/Takeaway_app/blob/b21b531d3ca9bb7dbfe5eeef91fa1de4850a9e8e/IMG_DF5F15374A02-1.jpeg" alt="Alt text" width="400">
 
 - Display the menu with items categorized as mains, sides, desserts, and drinks.
 - View the basket, including the quantity and total cost of each item.
