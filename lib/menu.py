@@ -1,5 +1,3 @@
-import json
-
 class Menu():
     def __init__(self):
         self.menu = [
@@ -25,7 +23,6 @@ class Menu():
 ]
 
     # formatted view of Menu
-    # raise exception if empty "Sorry! Menu is empty!"
     def menu_view(self):
         mains = [f"{dish['dish']} | {dish['price']}\n" for dish in self.menu if dish["category"] == "main"]
         sides = [f"{dish['dish']} | {dish['price']}\n" for dish in self.menu if dish["category"] == "side"]
@@ -33,6 +30,7 @@ class Menu():
         drinks = [f"{dish['dish']} | {dish['price']}\n" for dish in self.menu if dish["category"] == "drink"]
         return f"*** MENU ***\nMAINS:\n{''.join(mains)}\nSIDES:\n{''.join(sides)}\nDESSERTS:\n{''.join(desserts)}\nDRINKS:\n{''.join(drinks)}"
     
+    # returns menu lits of dictionaries
     def menu_objects(self):
         return self.menu
 
