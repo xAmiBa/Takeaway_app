@@ -1,5 +1,6 @@
 from lib.confirmation import *
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
+from lib.restaurant import Restaurant
 import pytest
 
 # TESTING CLASS: Confirmation()
@@ -15,5 +16,8 @@ def test_short_number_error():
         test = Confirmation("66666")
     assert str(err.value) == "The number is too short!"
 
-# UNIT TESTING 
-#TODO
+def test_checkout_and_send_txt():
+    text_sender = Mock()
+    text_sender.phone_number = "7900479648"
+    text_sender.message_body.return_value = "Mocked text message!"
+    assert text_sender.send_txt == True

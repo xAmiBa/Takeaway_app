@@ -2,7 +2,7 @@ from menu import Menu
 from datetime import datetime
 
 class Basket():
-    def __init__(self, menu_import = False, time = datetime):
+    def __init__(self, menu_import = False, time = datetime.today().strftime("%d/%m/%Y")):
         if menu_import == False:
             self.menu_data = Menu()
         else:
@@ -54,7 +54,9 @@ class Basket():
             raise Exception ("Basket is empty! There is no receipt.")
         self.update_basket()
         in_receipt = [f"{dish['dish']} | x {dish['quantity']} | {(dish['quantity'])*(dish['price'])}\n" for dish in self.basket]
-        return "YOUR RECEIPT:\n" + "".join(in_receipt) + f"\n\nTOTAL: {self.view_total()}\n-----------\n{self.time_now().today()}"
-
-    def time_now(self):
-        return self.time
+        return "YOUR RECEIPT:\n" + "".join(in_receipt) + f"\n\nTOTAL: {self.view_total()}\n-----------\n{self.time}"
+    
+# user1 = Basket()
+# user1.add_basket("Salad")
+# print(datetime.today().strftime("%d/%m/%Y"))
+# print(user1.view_receipt())

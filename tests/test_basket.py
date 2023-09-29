@@ -1,7 +1,9 @@
 from lib.basket import Basket
 import pytest
 from unittest.mock import Mock
+from unittest.mock import patch
 from lib.menu import Menu
+from datetime import datetime
 
 # TESTING CLASS: Basket()
 # Available modules:
@@ -70,11 +72,8 @@ def test_remove_1item_unit():
     test_basket.remove_basket("New Margarita")
     assert test_basket.view_basket() == "YOUR BASKET:\nChocolate cake | x 1 | 3.99\n\n\nTOTAL: 3.99"
 
-#BUG 
-# def test_view_receipt_unit():
-#     fake_time_now = Mock()
-#     fake_time_now.time_now.return_value = "27 September"
-#     test_basket = Basket(Menu(), fake_time_now.time_now)
-#     test_basket.add_basket("Margarita")
-#     test_basket.add_basket("Chocolate cake")
-#     assert test_basket.view_receipt() == f"YOUR RECEIPT:\nMargarita | x 1 | 14.99\nChocolate cake | x 1 | 3.99\n\n\nTOTAL: 18.98\n-----------\n27 September"
+def test_view_receipt_unit():
+    test_basket = Basket(False, "27/09/2023")
+    test_basket.add_basket("Margarita")
+    test_basket.add_basket("Chocolate cake")
+    assert test_basket.view_receipt() == f"YOUR RECEIPT:\nMargarita | x 1 | 14.99\nChocolate cake | x 1 | 3.99\n\n\nTOTAL: 18.98\n-----------\n27/09/2023"
